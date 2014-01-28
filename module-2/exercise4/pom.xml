@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tocea.course.cleancoder</groupId>
+	<artifactId>module2-exercice4</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>Exercice 4 from Module 2 : Course Clean coder</name>
+	<description>Code challenge</description>
+	<url>http://www.tocea.com</url>
+	<licenses>
+		<license>
+			<name>MIT license (also X11)</name>
+			<url>http://www.spdx.org/licenses/MIT</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Sylvain Leroy</name>
+		</developer>
+		<developer>
+			<name>Jérémie Guidoux</name>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+	</dependencies>
+
+</project>
