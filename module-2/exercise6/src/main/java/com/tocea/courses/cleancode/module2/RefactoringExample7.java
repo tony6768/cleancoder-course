@@ -3,35 +3,51 @@ package com.tocea.courses.cleancode.module2;
 
 
 
-import com.tocea.courses.cleancode.module2.api.ILoginValidator;
-import com.tocea.courses.cleancode.module2.api.IUserRepository;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.tocea.courses.cleancode.module2.api.Command;
+import com.tocea.courses.cleancode.module2.api.IPivertService;
 
 
 
-public class RefactoringExample7
+public class RefactoringExample7 implements Command
 {
     
     
-    private IUserRepository userRepo;
-    private ILoginValidator loginValidator;
+    private IPivertService pivertService;
     
     
     
-    public boolean Login(final String username, final String password) {
+    public void execute(final HttpServletRequest _request, final HttpServletResponse _response) {
     
     
-        final User user = userRepo.getUserByUsername(username);
-        
-        if (user == null) { return false; }
-        
-        if (loginValidator.isValid(user, password)) { return true; }
-        
-        user.failedLoginAttempts++;
-        
-        if (user.failedLoginAttempts >= 3) {
-            user.lockedOut = true;
+        String list = "<html>" + "<body>" + "<table id=\"end-points\">";
+        try {
+            final Statement statement = getPivertConnection().createStatement();
+            final ResultSet endPoints = statement.executeQuery("select id, name from endpoints");
+            while (endPoints.next()) {
+                final String name = endPoints.getString(2);
+                list += "<tr><td>" + name + "</td></tr>";
+            }
+            list += "</table>";
+            list += "</body>" + "</html>";
+            
+            _response.getWriter().print(list);
+        } catch (final Exception e) {
+            e.printStackTrace();
         }
         
-        return false;
     }
+    
+    
+    private IPivertService getPivertConnection() {
+    
+    
+        return pivertService;
+    }
+    
 }
