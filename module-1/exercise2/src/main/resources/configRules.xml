@@ -5,12 +5,19 @@
 <module name="Checker">
 	<module name="TreeWalker">
 		<!-- your Check goes here -->
-		<module name="com.tocea.course.cleancode.module1.MethodLimitCheck">
+<!-- 		<module name="com.tocea.course.cleancode.module1.MethodLimitCheck">
 			<property name="max" value="45" />
 		</module>
 		<module name="com.tocea.course.cleancode.module1.VariableMinimalSizeCheck">
 
 		</module>
+		<module name="com.tocea.course.cleancode.module1.MethodLimitCheck2">
+
+		</module>
+		 -->
+		<module name="com.tocea.course.cleancode.module1.IfDepthCheck">
+
+		</module> 
 	</module>
 </module>
       

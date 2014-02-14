@@ -7,7 +7,7 @@ public class AbstractLevelChallenge
 {
     
     
-    public Money calculatePay(final Employee e) throws InvalidEmployeeType {
+    public Money calculatePay(final AbstractEmployee e) throws InvalidEmployeeType {
     
     
         switch (e.getType()) {
@@ -23,7 +23,7 @@ public class AbstractLevelChallenge
     }
     
     
-    private Money calculateCommissionedPay(final Employee _e) {
+    private Money calculateCommissionedPay(final AbstractEmployee _e) {
     
     
         // Complex algorithm
@@ -31,7 +31,7 @@ public class AbstractLevelChallenge
     }
     
     
-    private Money calculateHourlyPay(final Employee _e) {
+    private Money calculateHourlyPay(final AbstractEmployee _e) {
     
     
         // Complex algorithm
@@ -39,7 +39,7 @@ public class AbstractLevelChallenge
     }
     
     
-    private Money calculateSalariedPay(final Employee _e) {
+    private Money calculateSalariedPay(final AbstractEmployee _e) {
     
     
         // Complex algorithm

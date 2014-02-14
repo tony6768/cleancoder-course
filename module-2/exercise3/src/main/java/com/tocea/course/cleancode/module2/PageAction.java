@@ -5,8 +5,6 @@ package com.tocea.course.cleancode.module2;
 
 import org.apache.log4j.Logger;
 
-import com.tocea.course.cleancode.module2.api.ErrorCode;
-
 
 
 public class PageAction
@@ -23,8 +21,10 @@ public class PageAction
     
     
         final Page page = new Page();
-        if (container.generatePage(page) != ErrorCode.E_OK) {
-            LOGGER.error("Generation of the page has failed");
+        try {
+            container.generatePage(page);
+        } catch (final Exception e) {
+            LOGGER.error("Generation of the page has failed", e);
         }
     }
     

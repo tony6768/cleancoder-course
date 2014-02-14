@@ -62,8 +62,8 @@ public class Board extends JPanel implements ActionListener
     
     
     
-    private final int   PREFIX_WIDTH  = 300;
-    private final int   PREFIX_HEIGHT = 300;
+    private final int   SCREEN_WIDTH  = 300;
+    private final int   SCREEN_HEIGHT = 300;
     private final int   SIZE_DOTS     = 10;
     private final int   ALL_DOTS      = 900;
     private final int   RAND_POS      = 29;
@@ -125,22 +125,12 @@ public class Board extends JPanel implements ActionListener
     }
     
     
-    public void appleFind() {
-    
-    
-        int r = (int) (Math.random() * RAND_POS);
-        a_x = r * SIZE_DOTS;
-        r = (int) (Math.random() * RAND_POS);
-        a_y = r * SIZE_DOTS;
-    }
-    
-    
     public void checkApple() {
     
     
         if (x[0] == a_x && y[0] == a_y) {
             dots++;
-            appleFind();
+            findApple();
         }
     }
     
@@ -148,28 +138,39 @@ public class Board extends JPanel implements ActionListener
     public void checkCollision() {
     
     
+        final int premiereLigne = y[0];
         for (int z = dots; z > 0; z--) {
             
-            if (z > 4 && x[0] == x[z] && y[0] == y[z]) {
+            if (z > 4 && x[0] == x[z] && premiereLigne == y[z]) {
                 inGame = false;
             }
         }
         
-        if (y[0] > PREFIX_HEIGHT) {
+        if (premiereLigne > SCREEN_HEIGHT) {
             inGame = false;
         }
         
-        if (y[0] < 0) {
+        if (premiereLigne < 0) {
             inGame = false;
         }
         
-        if (x[0] > PREFIX_WIDTH) {
+        if (x[0] > SCREEN_WIDTH) {
             inGame = false;
         }
         
         if (x[0] < 0) {
             inGame = false;
         }
+    }
+    
+    
+    public void findApple() {
+    
+    
+        int r = (int) (Math.random() * RAND_POS);
+        a_x = r * SIZE_DOTS;
+        r = (int) (Math.random() * RAND_POS);
+        a_y = r * SIZE_DOTS;
     }
     
     
@@ -182,7 +183,7 @@ public class Board extends JPanel implements ActionListener
         
         g.setColor(Color.white);
         g.setFont(small);
-        g.drawString(msg, (PREFIX_WIDTH - metr.stringWidth(msg)) / 2, PREFIX_HEIGHT / 2);
+        g.drawString(msg, (SCREEN_WIDTH - metr.stringWidth(msg)) / 2, SCREEN_HEIGHT / 2);
     }
     
     
@@ -196,7 +197,7 @@ public class Board extends JPanel implements ActionListener
             y[z] = 50;
         }
         
-        appleFind();
+        findApple();
         
         timer = new Timer(DELAY, this);
         timer.start();

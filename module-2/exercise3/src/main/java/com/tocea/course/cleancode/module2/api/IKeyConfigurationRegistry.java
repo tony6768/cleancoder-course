@@ -7,6 +7,6 @@ public interface IKeyConfigurationRegistry
 {
     
     
-    ErrorCode deleteKey(String _makeKey);
+    void deleteKey(String _makeKey) throws Exception;
     
 }

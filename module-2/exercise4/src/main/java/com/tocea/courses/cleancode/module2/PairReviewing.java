@@ -15,24 +15,12 @@ public class PairReviewing
     public void printGuessStatistics(final char candidate, final int count) {
     
     
-        String number;
-        String verb;
-        String pluralModifier;
-        if (count == 0) {
-            number = "no";
-            verb = "are";
-            pluralModifier = "s";
-        } else if (count == 1) {
-            number = "1";
-            verb = "is";
-            pluralModifier = "";
-        } else {
-            number = Integer.toString(count);
-            verb = "are";
-            pluralModifier = "s";
-        }
-        final String guessMessage =
-                String.format("There %s %s %s%s", verb, number, candidate, pluralModifier);
+        final ComposerMessage cm;
+        final IComposerMessage icomposerMessage = new ComposerMessage(candidate, count);
+        
+        
+        // final String guessMessage = cm.composerMessageDeSortie(candidate);
+        final String guessMessage = icomposerMessage.ecrire();
         print(guessMessage);
     }
     

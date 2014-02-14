@@ -3,7 +3,12 @@ package com.tocea.course.cleancode.module2;
 
 
 
-public class Employee
+import com.tocea.course.cleancode.module2.API.IEmployee;
+import com.tocea.course.cleancode.module2.API.IEmployeeVisitable;
+
+
+
+public abstract class AbstractEmployee implements IEmployeeVisitable, IEmployee
 {
     
     
@@ -13,7 +18,7 @@ public class Employee
     
     
     
-    public Employee() {
+    public AbstractEmployee() {
     
     
         super();

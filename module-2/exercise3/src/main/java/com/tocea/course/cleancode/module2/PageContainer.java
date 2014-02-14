@@ -27,26 +27,12 @@ public class PageContainer
     
     
     
-    public ErrorCode generatePage(final Page page) {
+    public void generatePage(final Page page) throws Exception {
     
     
-        if (deletePage(page) == ErrorCode.E_OK) {
-            if (registry.deleteReference(page.getName()) == ErrorCode.E_OK) {
-                if (configKeys.deleteKey(page.getName().makeKey()) == ErrorCode.E_OK) {
-                    LOGGER.trace("page deleted");
-                    return ErrorCode.E_OK;
-                }
-                LOGGER.trace("configKey not deleted");
-                return ErrorCode.E_FAILURE;
-                
-            } else {
-                LOGGER.error("deleteReference from registry failed");
-                return ErrorCode.E_FAILURE;
-            }
-        }
-        // Génération de la page
-        LOGGER.error("delete failed");
-        return ErrorCode.E_ERROR;
+        deletePage(page);
+        registry.deleteReference(page.getName());
+        configKeys.deleteKey(page.getName().makeKey());
         
         
     }
