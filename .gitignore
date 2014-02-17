@@ -8,3 +8,4 @@
 .classpath
 .project
 *~
+/module-2/AlternativeClassesWithDifferentInterfaces/target/
