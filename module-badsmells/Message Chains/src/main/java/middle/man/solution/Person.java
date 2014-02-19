@@ -2,10 +2,34 @@ package middle.man.solution;
 
 public class Person {
 
-    private Department department;
+	private String name;
 
-    public Department getDepartment() {
-        return department;
-    }
+	private String adresse;
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + "]";
+	}
+
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
 
 }

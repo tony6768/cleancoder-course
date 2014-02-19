@@ -1,14 +1,20 @@
 package middle.man.solution;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        Person john = new Person();
+        Employe john = new Employe("john", "AAA");
+        Manager william = new Manager("william", "BBB");
+        Department dep = new Department("research");
 
-        Department department = john.getDepartment();
-        Person manager = department.getManager();
-        String departmentName = department.getName();
-        String departmentCity = department.getCity();
+        
+        john.setDepartment(dep);
+        william.setDepartment(dep);
+        william.AjouterEmployer(john);
+        
+        System.out.println(william);
+
     }
 
 }

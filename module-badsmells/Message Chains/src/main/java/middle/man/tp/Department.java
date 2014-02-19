@@ -2,23 +2,24 @@ package middle.man.tp;
 
 public class Department {
 
-    private final Integer id;
-    private final DepartmentService service = new DepartmentService();
+    private String name;
 
-    public Department(Integer id) {
-        this.id = id;
-    }
+    
+    
+	public Department(String name) {
+		super();
+		this.name = name;
+	}
 
-    public Person getManager() {
-        return service.getManager(id);
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getName() {
-        return service.getDepartmentName(id);
-    }
-
-    public String getCity() {
-        return service.getDepartmentCity(id);
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+    
+    
+    
 
 }

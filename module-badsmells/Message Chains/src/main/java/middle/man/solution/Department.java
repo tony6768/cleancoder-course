@@ -2,27 +2,24 @@ package middle.man.solution;
 
 public class Department {
 
-    private final Integer id;
+    private String name;
 
-    public Department(Integer id) {
-        this.id = id;
-    }
+    
+    
+	public Department(String name) {
+		super();
+		this.name = name;
+	}
 
-    public Person getManager() {
-        Person manager = null;
-        //...
-        return manager;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getName() {
-        String name = null;
-        //...
-        return name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+    
+    
+    
 
-    public String getCity() {
-        String city = null;
-        //...
-        return city;
-    }
 }

@@ -2,18 +2,34 @@ package middle.man.tp;
 
 public class Person {
 
-    private Department department;
+	private String name;
 
-    public Person getManager() {
-        return department.getManager();
-    }
+	private String adresse;
 
-    public String getDepartmentName() {
-        return department.getName();
-    }
+	@Override
+	public String toString() {
+		return "Person [name=" + name + "]";
+	}
 
-    public String getDepartmentCity() {
-        return department.getCity();
-    }
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
 
 }

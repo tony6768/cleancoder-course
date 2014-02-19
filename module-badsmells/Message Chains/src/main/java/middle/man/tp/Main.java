@@ -1,13 +1,20 @@
 package middle.man.tp;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        Person john = new Person();
+        Employe john = new Employe("john", "AAA");
+        Manager william = new Manager("william", "BBB");
+        Department dep = new Department("research");
+        DepartmentService service = new DepartmentService();
 
-        Person manager = john.getManager();
-        String departmentName = john.getDepartmentName();
-        String departmentCity = john.getDepartmentCity();
+        
+        service.setDepartment(dep, john);
+        service.setDepartment(dep, william);
+        service.ajouterEmploye(william, john);
+        
+        System.out.println(william);
 
     }
 

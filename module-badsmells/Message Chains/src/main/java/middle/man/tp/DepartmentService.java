@@ -1,23 +1,37 @@
 package middle.man.tp;
 
+import java.util.Iterator;
+
 public class DepartmentService {
 
-    public Person getManager(Integer departmentId) {
-        Person manager = null;
-        //...
-        return manager;
+   
+	/**
+	 * desassocie un employe et un manager
+	 * @param _manager
+	 * @param _employe
+	 */
+	public void SupprimerManager (Manager _manager,Employe _employe) {
+		 _manager.removeEmployee(_employe);
     }
+	
+	/**
+	 * associer un manager et un empploye
+	 * Si un employe est deja associer a un manager, alors il sera desassocié de celui ci avant detre associé au nouveau
+	 * @param _manager
+	 * @param _employe
+	 */
+	public void ajouterEmploye(Manager _manager,Employe _employe) {
+		_manager.AjouterEmployer(_employe);
+	}
+	
+	/** 
+	 * associer un employe a un departement
+	 * @param _department
+	 * @param _employe
+	 */
+	public void setDepartment(Department _department, Employe _employe) {
+	 _employe.setDepartment(_department);	
+	}
 
-    public String getDepartmentName(Integer departmentId) {
-        String name = null;
-        //...
-        return name;
-    }
-
-    public String getDepartmentCity(Integer departmentId) {
-        String city = null;
-        //...
-        return city;
-    }
 
 }
