@@ -1,0 +1,9 @@
+
+changer temps refaxcroting dans sonar
+version 1.4 du plugin ne fonctionne pas.
+licence scertify.
+signifer le sens de metrique de façon visuelle. probleme de sens de lecture
+
+
+Demande a sylvan le document technique des bonne pratiques du pole emploi.
+

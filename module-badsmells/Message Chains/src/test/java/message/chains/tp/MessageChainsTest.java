@@ -8,7 +8,7 @@ public class MessageChainsTest {
 	
 	
 	@Test
-	public void test() {
+	public void testPrixDansUnPaysEuropeen() {
 		Country country = new Country(true);
 		Address address = new Address(country );
 		Customer customer1= new Customer(address);
@@ -21,7 +21,7 @@ public class MessageChainsTest {
 	}
 	
 	@Test
-	public void test2() {
+	public void testPrixDansUnPaysNonEuropeen() {
 		Country country = new Country(false);
 		Address address = new Address(country );
 		Customer customer1= new Customer(address);

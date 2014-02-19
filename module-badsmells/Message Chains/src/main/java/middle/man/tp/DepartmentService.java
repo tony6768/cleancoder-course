@@ -4,14 +4,15 @@ import java.util.Iterator;
 
 public class DepartmentService {
 
+	private Manager m;
    
 	/**
 	 * desassocie un employe et un manager
 	 * @param _manager
 	 * @param _employe
 	 */
-	public void SupprimerManager (Manager _manager,Employe _employe) {
-		 _manager.removeEmployee(_employe);
+	public void SupprimerManager (Employe _employe) {
+		 m.removeEmployee(_employe);
     }
 	
 	/**

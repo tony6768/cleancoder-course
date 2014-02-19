@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.komea.plugins.dataclass;
+package data.clazz;
 
 /**
  *
@@ -11,11 +11,11 @@ package org.komea.plugins.dataclass;
  */
 public class ModifierEmployes {
 
-    public void addPersonne(Employes employer, Personne personne) {
+    public void ajoutPersonne(Employes employer, Personne personne) {
         employer.getPersonne().add(personne);
     }
 
-    public void addPoste(Employes employer, Poste poste) {
+    public void ajoutPoste(Employes employer, Poste poste) {
         employer.getPoste().add(poste);
     }
 

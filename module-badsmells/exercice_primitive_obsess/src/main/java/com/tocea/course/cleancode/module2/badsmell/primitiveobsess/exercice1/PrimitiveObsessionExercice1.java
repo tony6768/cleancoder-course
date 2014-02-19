@@ -13,11 +13,17 @@ public class PrimitiveObsessionExercice1
     
     
     public static final String[] personData = new String[] {
-            "John:Wayne:36:5400", "Bill:Curtis:24:7800", "Homeless:People:12:1" };
+            "John:Wayne:36:5400", "jeremie:guidoux:24:7800", "Homeless:People:12:1" };
     
+   private String name;
     
-    
-    public PrimitiveObsessionExercice1() {
+    public PrimitiveObsessionExercice1(String name) {
+	super();
+	this.name = name;
+}
+
+
+	public PrimitiveObsessionExercice1() {
     
     
         super();

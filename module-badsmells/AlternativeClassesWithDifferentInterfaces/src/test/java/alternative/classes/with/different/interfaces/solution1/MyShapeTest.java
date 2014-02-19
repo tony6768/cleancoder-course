@@ -1,17 +1,23 @@
 package alternative.classes.with.different.interfaces.solution1;
 
-import alternative.classes.with.different.interfaces.solution1.MyShape;
-import static junit.framework.Assert.assertEquals;
-import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-public class MyShapeTest extends TestCase {
+public class MyShapeTest  {
 
-    private final MyShape myShape = new MyShape();
+    private  MyShape myShape;
+    
+    @Before
+    public void setUp() {
+    	myShape = new MyShape();
+    }
 
+    @Test
     public void test() {
-        assertEquals(82.812f, this.myShape.getArea());
+        Assert.assertEquals(82.812f, this.myShape.getArea(), 0.1);
         this.myShape.scale(1.5f);
-        assertEquals(186.327f, this.myShape.getArea());
+        Assert.assertEquals(186.327f, this.myShape.getArea(), 0.1);
     }
 
 }

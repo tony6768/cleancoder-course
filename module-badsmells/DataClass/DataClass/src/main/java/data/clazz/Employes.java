@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.komea.plugins.dataclass;
+package data.clazz;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,8 +18,8 @@ public class Employes {
 
     private List<Personne> personne;
     private List<Poste> poste;
-    
-    // information qui lie une personne a une poste, un poste peux être occuper par plusieur personnes
+     
+   	// information qui lie une personne a une poste, un poste peux être occuper par plusieur personnes
     private Map<Integer, Integer> relation;
 
     public Employes() {
