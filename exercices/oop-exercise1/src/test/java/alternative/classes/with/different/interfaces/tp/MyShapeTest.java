@@ -1,0 +1,24 @@
+package alternative.classes.with.different.interfaces.tp;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class MyShapeTest {
+
+	private MyShape myShape;
+
+	@Before
+	public void setUp() {
+		myShape = new MyShape();
+	}
+
+	@Test
+	public void test() {
+		Assert.assertEquals(82.812f, this.myShape.getTotalArea(), 0.1);
+		this.myShape.scaleAll(1.5f);
+		Assert.assertEquals(186.327f, this.myShape.getTotalArea(), 0.1);
+	}
+
+}
