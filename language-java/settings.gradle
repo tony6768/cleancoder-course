@@ -1,0 +1,14 @@
+rootProject.name = 'exercices'
+
+include 'fowler-refactoring'
+
+
+include 'code-challenge'
+include 'refactoring-exercise2'
+include 'oop-exercise1'
+include 'badsmell-dataclass-exercise1'
+include 'badsmell-messagechain-exercise1'
+include 'badsmell-messagechain-exercise2'
+include 'naming-exercise1'
+
+
