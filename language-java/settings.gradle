@@ -8,7 +8,8 @@ include 'naming-exercise1'
 
 include 'badsmell-dataclass-exercise1'
 include 'badsmell-messagechain-exercise1'
-include 'badsmell-messagechain-exercise2'
+include 'badsmell-middleman-exercise-1'
 
+include 'csvchallenge'
 
 
