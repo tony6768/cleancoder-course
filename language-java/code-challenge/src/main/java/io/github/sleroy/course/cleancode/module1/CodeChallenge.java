@@ -1,5 +1,5 @@
 
-package io.github.sleroy.course.cleancode.module1;
+package com.tocea.course.cleancode.module1;
 
 
 
@@ -17,7 +17,6 @@ public class CodeChallenge
     
     
         final int length = str.length();
-        
         final List<Character> charList = new ArrayList<Character>(str.length());
         for (int zIndex = -1; zIndex < length - 1; ++zIndex) {
             charList.add(str.charAt(zIndex + 1));
@@ -37,6 +36,4 @@ public class CodeChallenge
         return new String(array);
         
     }
-    
-
-
+}
