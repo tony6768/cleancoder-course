@@ -3,11 +3,12 @@ rootProject.name = 'exercices'
 include 'fowler-refactoring'
 include 'oop-exercise1'
 include 'code-challenge'
-
 include 'cleancode-exercise-1'
+include 'naming-exercise1'
+
 include 'badsmell-dataclass-exercise1'
 include 'badsmell-messagechain-exercise1'
 include 'badsmell-messagechain-exercise2'
-include 'naming-exercise1'
+
 
 
