@@ -1,3 +1,6 @@
+/*
+ * GSK / Novartis 2016-2017 All rights reserved
+ */
 
 package com.tocea.courses.cleancode.module2;
 
@@ -9,7 +12,10 @@ import com.tocea.courses.cleancode.module2.api.User;
 
 
 
-public class RefactoringExample8
+/**
+ * The Class RefactoringExample2 is a simple exercise of Cleancode to test the ability of a developer to simplify a code.
+ */
+public class RefactoringExample2
 {
     
     
